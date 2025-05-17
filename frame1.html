@@ -1,79 +1,47 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 10px;
-      background-color: white;
-    }
-
-    .logo {
-      height: 60px;
-      max-width: 100%;
-    }
-
-    .title {
-      flex: 1 1 100%;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .title h1 {
-      color: deepskyblue;
-      font-size: 24px;
-      margin: 0;
-    }
-
-    /* Responsive pour petits écrans */
-    @media (max-width: 600px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .logo {
-        height: 50px;
-        margin: 10px 0;
-      }
-
-      .title h1 {
-        font-size: 20px;
-      }
-    }
-  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            height: 100%;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 10px;
+            background-color: white;
+        }
+        .logo {
+            height: 60px;
+        }
+        .title {
+            color: deepskyblue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="container">
-    <a href="https://www.eneam.uac.bj" target="_blank">
-      <img src="logo_eneam.png" alt="Logo ENEAM" class="logo">
-    </a>
-
-    <div class="title">
-      <h1>BIENVENUE SUR MON SITE</h1>
+    <div class="container">
+        <a href="https://www.eneam.uac.bj" target="_blank">
+            <img src="logo_eneam.png" alt="Logo ENEAM" class="logo">
+        </a>
+        <div class="title">
+            <h1>BIENVENUE SUR MON SITE</h1>
+        </div>
+        <a href="https://www.etudiant.uac.bj" target="_blank">
+            <img src="logo_uac.png" alt="Logo UAC" class="logo">
+        </a>
     </div>
-
-    <a href="https://www.etudiant.uac.bj" target="_blank">
-      <img src="logo_uac.png" alt="Logo UAC" class="logo">
-    </a>
-  </div>
-
 </body>
 </html>
