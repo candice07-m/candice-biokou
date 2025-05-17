@@ -10,34 +10,50 @@
         }
         body {
             font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Empêche le débordement horizontal */
+            overflow-x: hidden;
         }
         .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px;
             background-color: white;
-            flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+            flex-wrap: wrap;
         }
         .logo {
-            max-height: 60px; /* Taille maximale pour les logos */
+            max-height: 50px; /* Taille réduite pour mobile */
             width: auto;
-            flex-shrink: 0; /* Empêche le rétrécissement des logos */
+            flex-shrink: 0;
         }
         .title {
             color: deepskyblue;
             font-weight: bold;
-            font-size: clamp(16px, 4vw, 20px); /* Taille de police responsive */
+            font-size: 5vw; /* Taille responsive en vw */
             text-align: center;
-            padding: 0 10px;
-            flex: 1; /* Prend l'espace disponible */
-            min-width: 100px; /* Largeur minimale pour le titre */
+            padding: 0 5px;
+            flex: 1 1 100%; /* Prend toute la largeur sur mobile */
+            order: -1; /* Met le titre en première ligne */
+            margin-bottom: 10px;
         }
         .title h1 {
-            font-size: inherit; /* Hérite de la taille du conteneur .title */
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis; /* Ajoute "..." si le texte est trop long */
+            font-size: inherit;
+            white-space: normal; /* Permet le retour à la ligne */
+            overflow: visible;
+            text-overflow: clip;
+            margin: 0;
+        }
+
+        /* Media Query pour desktop */
+        @media (min-width: 768px) {
+            .title {
+                flex: 1;
+                order: 0; /* Remet le titre entre les logos */
+                font-size: 20px;
+                min-width: 0;
+            }
+            .logo {
+                max-height: 80px;
+            }
         }
     </style>
 </head>
@@ -47,7 +63,7 @@
             <img src="logo_eneam.png" alt="Logo ENEAM" class="logo">
         </a>
         <div class="title">
-            <h1>BIENVENUE!</h1>
+            <h1>BIENVENUE SUR MON SITE</h1>
         </div>
         <a href="https://www.etudiant.uac.bj" target="_blank">
             <img src="logo_uac.png" alt="Logo UAC" class="logo">
