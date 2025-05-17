@@ -1,56 +1,37 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
             box-sizing: border-box;
         }
-
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial;
+            height: 100%;
+            overflow: hidden;
         }
-
         .container {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
+            height: 100%;
+            padding: 0 10px;
             background-color: white;
         }
-
         .logo {
             height: 60px;
-            max-width: 100%;
         }
-
         .title {
-            flex: 1 1 100%;
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        .title h1 {
             color: deepskyblue;
-            font-size: 24px;
-            margin: 0;
-        }
-
-        /* Adaptation mobile */
-        @media (max-width: 600px) {
-            .container {
-                flex-direction: column;
-                text-align: center;
-            }
+            font-weight: bold;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
         <a href="https://www.eneam.uac.bj" target="_blank">
             <img src="logo_eneam.png" alt="Logo ENEAM" class="logo">
@@ -62,6 +43,5 @@
             <img src="logo_uac.png" alt="Logo UAC" class="logo">
         </a>
     </div>
-
 </body>
 </html>
