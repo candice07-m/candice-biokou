@@ -1,16 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poèmes - Le Corbeau et le Renard</title>
     <style>
         body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #2c3e50;
             text-align: center;
-            font-family: Arial;
-            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #16a085;
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .intro {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #7f8c8d;
+        }
+        
+        .poem-container {
+            border: 3px solid #27ae60;
+            border-radius: 8px;
+            padding: 25px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .poem {
+            font-size: 1.1em;
+            line-height: 2;
+            text-align: center;
+        }
+        
+        .author {
+            text-align: right;
+            font-style: italic;
+            margin-top: 20px;
+            color: #7f8c8d;
+        }
+        
+        em {
+            color: #e74c3c;
+            font-style: normal;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .poem-container {
+                padding: 15px;
+            }
+            
+            .poem {
+                font-size: 1em;
+                line-height: 1.8;
+            }
         }
     </style>
 </head>
 <body>
-    <h2>Contenu du Menu 2</h2>
-    <p>Voici le contenu du menu 2 affiché dans Frame_3.</p>
+    <h1>Poèmes</h1>
+    <h2>Le Corbeau et le Renard</h2>
+    
+    <p class="intro">Voici l'une des fables les plus connues de <em>Jean de La Fontaine</em> :</p>
+    
+    <div class="poem-container">
+        <div class="poem">
+            <p>
+                Maître Corbeau, sur un arbre perché,<br> 
+                Tenait en son bec un fromage.<br>
+                Maître Renard, par l'odeur alléché,<br>
+                Lui tint à peu près ce langage :<br>
+                "Hé ! bonjour, Monsieur du Corbeau.<br>
+                Que vous êtes joli ! que vous me semblez beau !<br> 
+                Sans mentir, si votre ramage<br>
+                Se rapporte à votre plumage,<br>
+                Vous êtes le Phénix des hôtes de ces bois."<br>
+                À ces mots le Corbeau ne se sent pas de joie ;<br>
+                Et pour montrer sa belle voix,<br>
+                Il ouvre un large bec, laisse tomber sa proie.<br>
+                Le Renard s'en saisit, et dit : "Mon bon Monsieur,<br> 
+                Apprenez que tout flatteur<br>
+                Vit aux dépens de celui qui l'écoute :<br>
+                Cette leçon vaut bien un fromage, sans doute."<br> 
+                Le Corbeau, honteux et confus,<br>
+                Jura, mais un peu tard, qu'on ne l'y prendrait plus.
+            </p>
+        </div>
+        
+        <div class="author">Jean de La Fontaine</div>
+    </div>
 </body>
 </html>
