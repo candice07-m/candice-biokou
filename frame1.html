@@ -1,47 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
             box-sizing: border-box;
         }
+
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial;
-            height: 100%;
-            overflow: hidden;
+            font-family: Arial, sans-serif;
         }
+
         .container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            height: 100%;
-            padding: 0 10px;
+            padding: 10px;
             background-color: white;
         }
+
         .logo {
             height: 60px;
+            max-width: 100%;
         }
+
         .title {
+            flex: 1 1 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .title h1 {
             color: deepskyblue;
-            font-weight: bold;
-            font-size: 20px;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* Adaptation mobile */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin: 10px 0;
+                height: 50px;
+            }
+
+            .title h1 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <a href="https://www.eneam.uac.bj" target="_blank">
             <img src="logo_eneam.png" alt="Logo ENEAM" class="logo">
         </a>
+
         <div class="title">
             <h1>BIENVENUE SUR MON SITE</h1>
         </div>
+
         <a href="https://www.etudiant.uac.bj" target="_blank">
             <img src="logo_uac.png" alt="Logo UAC" class="logo">
         </a>
     </div>
+
 </body>
 </html>
