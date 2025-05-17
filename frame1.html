@@ -5,29 +5,40 @@
     <style>
         * {
             box-sizing: border-box;
-        }
-        body {
             margin: 0;
             padding: 0;
-            font-family: Arial;
-            height: 100%;
-            overflow: auto;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Empêche le débordement horizontal */
         }
         .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 100%;
-            padding: 0 10px;
+            padding: 10px;
             background-color: white;
+            flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
         }
         .logo {
-            height: auto;
+            max-height: 80px; /* Taille maximale pour les logos */
+            width: auto;
+            flex-shrink: 0; /* Empêche le rétrécissement des logos */
         }
         .title {
             color: deepskyblue;
             font-weight: bold;
-            font-size: 20px;
+            font-size: clamp(16px, 4vw, 20px); /* Taille de police responsive */
+            text-align: center;
+            padding: 0 10px;
+            flex: 1; /* Prend l'espace disponible */
+            min-width: 200px; /* Largeur minimale pour le titre */
+        }
+        .title h1 {
+            font-size: inherit; /* Hérite de la taille du conteneur .title */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /* Ajoute "..." si le texte est trop long */
         }
     </style>
 </head>
