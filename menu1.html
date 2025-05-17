@@ -116,6 +116,28 @@
             object-fit: contain; /* Ajuste sans rognage */
         }
 
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            flex-wrap: wrap;
+            text-align: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            margin-top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo {
+            height: 40px; /* Taille réduite pour mobile */
+            width: auto;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
         blockquote {
             margin: 20px 0;
             padding: 15px;
