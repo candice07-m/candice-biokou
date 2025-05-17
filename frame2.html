@@ -1,57 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             margin: 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* centre les boutons horizontalement */
         }
+
         h1 {
             color: blue;
             text-align: center;
+            margin-bottom: 20px;
         }
-        a {
-            display: block;
-            text-decoration: none;
-            margin: 5px 0;
-            color: black;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .title {
-            color: deepskyblue;
-            font-weight: bold;
-        }
+
         .menu-button {
-            display: inline-block;
-            padding: 10px 50px;
-            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%; /* largeur en % pour que ça s’adapte */
+            max-width: 200px; /* limite max sur grands écrans */
+            height: 45px;
+            margin: 10px 0;
             background-color: #007BFF;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: bold;
             transition: background-color 0.3s ease;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
         }
 
         .menu-button:hover {
             background-color: #0056b3;
         }
 
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .menu-button {
+                width: 90%;
+                font-size: 1em;
+                height: 50px;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>MENU</h1>
-    <div class="title"></div>
-    
+
     <a href="menu1.html" target="frame3" class="menu-button">PAGE1</a>
-    <a href="menu2.html" target="frame3"  class="menu-button">PAGE2</a>
-    <a href="menu3.html" target="frame3"  class="menu-button">FORMULAIRE1</a>
-    <a href="menu4.html" target="frame3"  class="menu-button">FORMULAIRE2</a>
-    <a href="menu5.html" target="frame3"  class="menu-button">TABLEAUX</a>
-    <a href="menu6.html" target="frame3"  class="menu-button">CV</a>
+    <a href="menu2.html" target="frame3" class="menu-button">PAGE2</a>
+    <a href="menu3.html" target="frame3" class="menu-button">FORMULAIRE1</a>
+    <a href="menu4.html" target="frame3" class="menu-button">FORMULAIRE2</a>
+    <a href="menu5.html" target="frame3" class="menu-button">TABLEAUX</a>
+    <a href="menu6.html" target="frame3" class="menu-button">CV</a>
 </body>
 </html>
