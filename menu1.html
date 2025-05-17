@@ -100,6 +100,22 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
 
+        .div-conteneur {
+            width: 100%;
+            aspect-ratio: 16/9; /* Maintient un ratio (optionnel) */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0; /* Fond visible si l'image est plus petite */
+        }
+
+        .div-conteneur img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Ajuste sans rognage */
+        }
+
         blockquote {
             margin: 20px 0;
             padding: 15px;
@@ -251,10 +267,10 @@
                 J'ai beaucoup de hobbies que je ne peux pas tous citer.<br>
                 J'aimerais tout faire pour rendre fière mon papa et pouvoir honorer la mémoire de maman.
             </blockquote>
-        </section>  
-    <div class="">
-        <img style="height: 760px; width: auto; opacity: 0.9; border-radius: 3px;place-items: center;" src="candice.jpg" alt="Candice">
-    </div>
+        </section> 
+        <div class="div-conteneur">
+            <img src="candice.jpg" alt="Candice">
+        </div>  
     <div class="">
         <a href="index.html"><input type="button" value="Retour à l'Acceuil"class="home-button"></a>
     </div>
