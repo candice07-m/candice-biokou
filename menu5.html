@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tableaux</title>
   <style>
     body {
       background-color: white;
       font-family: Arial, sans-serif;
-      text-align: center;
-      border-style: double;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: double 4px black;
     }
 
     table {
-      margin: 30px auto;
+      margin: 30px 0;
       border-collapse: collapse;
     }
 
@@ -23,19 +27,17 @@
       text-align: center;
     }
 
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
     .a { background-color: red; color: white; }
     .b { background-color: green; color: white; }
     .c { background-color: blue; color: white; }
     .g { border: 2px solid black; }
 
-    caption {
-      font-weight: bold;
-      text-decoration: 
-      margin-bottom: 10px;
-    }
-
     .btn {
-      display: block;
       margin: 30px auto;
       padding: 10px 20px;
       background-color: gray;
@@ -43,50 +45,50 @@
       text-decoration: none;
       border-radius: 8px;
     }
-    
-    }
-    .tableau {
-    display: inline-block;
-    border: 1px solid black;
-    }
-    .ligne {
-    display: flex;
-    }
-    .cellule {
-    border: 1px solid black;
-    width: 100px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lightgray;
-    }
-    .cellule.large {
-    background-color: green;
-    color: black;
-    height: 80px;
-    width: 306px;
-    }
+
+    /* Styles pour Tableau 4 */
     .tableau-wrapper {
       text-align: center;
-      margin: 50px 0; /* espace vertical */
+      margin: 50px 0;
     }
-    .titre {
-    font-weight: bold;
-    text-decoration: 
-    margin-bottom: 8px;
+
+    .tableau {
+      display: inline-block;
+      border: 1px solid black;
+    }
+
+    .ligne {
+      display: flex;
+    }
+
+    .cellule {
+      border: 1px solid black;
+      width: 100px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+    }
+
+    .cellule.large {
+      background-color: green;
+      color: black;
+      width: 306px;
     }
   </style>
 </head>
 <body>
+
   <table>
     <caption>Tableau 1</caption>
     <tr><th colspan="2">A</th></tr>
     <tr><td>B</td><td>C</td></tr>
   </table>
+
   <table>
     <caption>Tableau 2</caption>
-   <tr>
+    <tr>
       <td class="a" rowspan="2">A</td>
       <td colspan="3">B</td>
     </tr>
@@ -102,27 +104,32 @@
       <td class="g">G</td>
     </tr>
   </table>
-<div class="tableau-wrapper">
-  <h3>Tableau 4</h3>
-  <div class="tableau">
-    <div class="ligne">
-      <div class="cellule large">IG1-B</div>
-    </div>
-    <div class="ligne">
-      <div class="cellule">IG1-A</div>
-      <div class="cellule">IG2-A</div>
-      <div class="cellule">IG2-B</div>
+
+  <div class="tableau-wrapper">
+    <h3>Tableau 4</h3>
+    <div class="tableau">
+      <div class="ligne">
+        <div class="cellule large">IG1-B</div>
+      </div>
+      <div class="ligne">
+        <div class="cellule">IG1-A</div>
+        <div class="cellule">IG2-A</div>
+        <div class="cellule">IG2-B</div>
+      </div>
     </div>
   </div>
-</div>
-<table>
+
+  <table>
     <caption>Tableau 3</caption>
-       <tr>
+    <tr>
       <th rowspan="2">D</th>
       <th>E</th>
     </tr>
-    <tr><td>F</td></tr>
+    <tr>
+      <td>F</td>
+    </tr>
   </table>
+
   <a href="#" class="btn">Retour</a>
 
 </body>
